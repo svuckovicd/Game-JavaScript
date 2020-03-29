@@ -1,0 +1,28 @@
+$primary-color : #444; //dark gray
+$secondary-color : #eece1a;
+$lime-green:  hsl(136, 65%, 51%);
+$darkblue : hsl(233, 26%, 24%);
+$bright: hsl(192, 70%, 51%);
+$background-opacity:0.9;
+
+//animation  and mixin
+@mixin easeOut {
+
+    transition:all 0.9s;
+}
+    
+@keyframes text {
+    from  {transform:translateX(1000%);
+}    
+    to{transform: translateX(0);}
+}
+
+//Delay each span item slide by 0.3s
+@for $x from 1 through 4 {
+    .text:nth-child(#{$x}) {
+        animation:text $x * 0.3s;
+        color: rgb(200,  $x * 50,$x * 100)
+        
+    }
+    
+}
