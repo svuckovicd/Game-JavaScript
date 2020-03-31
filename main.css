@@ -200,10 +200,14 @@ body {
       background: rgba(73, 73, 73, 0.2); }
   @media (max-width: 600px) {
      #question span {font-size:1.2rem;}
-    #quiz .show-result .answers {
+  #quiz .show-result{
+   top:30px;
+} 
+ #quiz .show-result .answers {
       font-size: 15px; }
     #quiz .show-result .level span {
       width:6px;
       height:6px;
-      line-height:0.5;
+      
+      
  } }
