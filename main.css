@@ -204,4 +204,6 @@ body {
       font-size: 15px; }
     #quiz .show-result .level span {
       width:6px;
-      height:6px; } }
+      height:6px;
+      line-height:0.5;
+ } }
