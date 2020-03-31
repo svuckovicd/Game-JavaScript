@@ -64,7 +64,7 @@ body {
   background: #494e74;
   font-size: 1.8rem;
   position: absolute;
-  top: 75%;
+  top: 55vh;
   left: calc(44% - 80px);
   width: 250px;
   height: 50px;
@@ -199,7 +199,7 @@ body {
       text-shadow: #2d314d 1px 15px 1px;
       background: rgba(73, 73, 73, 0.2); }
   @media (max-width: 600px) {
-     .layout span {font-size:2.5rem;}
+     .layout span {font-size:4rem;}
      #question span {font-size:1.2rem;}
      #quiz #answer p {font-size:1rem;}
   #quiz .show-result{
@@ -209,7 +209,5 @@ body {
       font-size: 15px; }
     #quiz .show-result .level span {
       width:6px;
-      height:6px;
-      
-      
- } }
+      height:6px; }
+    #quiz .finish h1 {font-size:3rem;} }
