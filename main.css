@@ -198,7 +198,8 @@ body {
       color: #fff;
       text-shadow: #2d314d 1px 15px 1px;
       background: rgba(73, 73, 73, 0.2); }
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
+     #question span {font-size:1.2rem;}
     #quiz .show-result .answers {
       font-size: 15px; }
     #quiz .show-result .level span {
