@@ -1,0 +1,208 @@
+@import  "config";
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color:rgba(lighten($darkblue, 5),20%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    margin: 0 auto;
+    
+}
+
+.layout {
+    background: $primary-color;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    text-align: center;
+    padding-top:18vh;
+    span{
+        display:inline-block;
+        color:#fff;
+        font-size:5rem;
+        text-shadow:  hsl(233, 10%, 65%) 0.5px 0.9px 1.5px;
+    }
+   
+}
+
+//button play game
+.start-btn{
+    background: hsl(233, 23%, 37%);
+    font-size: 1.8rem;
+    position:absolute;
+    top:50vh;
+    left:calc(44% - 80px );
+    width:250px;
+    height:50px;
+    border-radius:15px;
+    border:none;
+    &:hover{
+        cursor: pointer;
+        border:1px solid black;
+        font-size:2rem;
+    }
+}
+
+//quiz 
+     #quiz {
+        margin:5vh auto;
+        background-color:rgba(lighten($darkblue, 5),20%);
+        padding-top:15vh;
+        border-radius:50px;
+        width:70%;
+        position:relative;
+        transform: translate3d(0,-100%,0);
+        @include easeOut;
+        #holder{
+            width:100%;
+            margin:0 auto;
+            padding:20px;
+            font-size: 1.5rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+          
+
+        #question{
+            background:linear-gradient(to right, $darkblue, $bright);
+            width:100%; 
+            max-height:200px;  
+            font-weight: bold;
+            color:#fff;
+            padding:15px;
+            text-align: center;
+            display:flex;
+            align-items: center;
+            flex-basis:300px;
+            margin:0 auto;
+            border-radius:20px;
+            span{
+                background: rgba(lighten($primary-color, 2),0.2); 
+                width:100%;
+            }
+        }
+      
+           
+        #answer{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top:50px;
+            .p{
+               background:hsl(212, 78%, 75%);
+               color:$darkblue;
+                width:45%;
+                flex-basis:280px;
+                margin:10px 60px 10px 10px;
+                height:50px;
+                padding:10px;
+                text-align: center;
+                border-radius:12px;
+                @include easeOut;
+                &:hover{
+                cursor: pointer;
+                font-size: 1.6rem;
+                border:1px solid black;
+                font-weight: bold;
+            }
+        }
+    }}
+       .show-result {
+           position:absolute;
+           border:0.1px solid #ffffff10;
+           display:flex;
+           justify-content: space-between;
+           width:100%;
+           top:50px;
+           left:0%;
+           border-radius:10px;
+           right:150px;
+           font-size:1.5rem;
+           .answers{
+           padding:5px 60px;
+
+           .true{
+               color:$lime-green;
+               text-align: right;
+
+           }
+           .false {
+            text-align: right;
+               color:#df0101;
+           }
+        }
+
+           .level{
+              flex:1;
+               padding-left:20px;
+               
+               
+          span{
+              display:inline-block;
+              border-radius:50%;
+              width:50px;
+              min-width:10px;
+              min-height: 10px;
+              height:50px;
+          }
+        }
+
+       
+
+}
+ //finish test
+ .finish{
+    position: absolute;
+    width:100%;
+    top:20vh;
+    h1{
+        text-align: center;
+        font-size:4rem;
+        color:#fff;
+        text-shadow: $darkblue 1px 15px 1px;
+        background: rgba(lighten($primary-color, 2),0.2); 
+        
+    }
+  }
+
+@media screen and (max-width:768px){
+    #question {
+        span{
+            font-size:1.4rem;
+        }
+    }
+    #answer{
+        .p{
+            font-size:1.2rem;
+        }
+    }
+    .show-result{
+    .answers{
+        font-size:15px;
+    }
+    .level{
+        span{
+            max-width:15px;
+            max-height:15px;
+        }
+    }
+    .finish{
+        h1{
+            font-size:3rem;
+        }
+    }
+    }
+}
+  
+
+
+
+
+
+
+
+     }
